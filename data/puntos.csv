@@ -1,0 +1,22 @@
+id,nombre,lat,lon,zona,superficie,sombra,descripcion
+P01,Acceso Metro San Joaquín,-33.49925,-70.61535,Acceso poniente,concreto,sol,Entrada peatonal desde el metro por Vicuña Mackenna
+P02,Estacionamiento Norte 1,-33.49675,-70.61563,Acceso poniente,asfalto,sol,Estacionamiento abierto junto al Centro de Innovación
+P03,Paseo Sagrado Corazón (poniente),-33.49852,-70.61500,Eje central,concreto,parcial,Paseo principal con árboles a un costado
+P04,Explanada Educación,-33.49845,-70.61425,Educación y Humanidades,concreto,sol,Explanada frente a la Facultad de Educación
+P05,Prado Humanidades,-33.49718,-70.61232,Educación y Humanidades,pasto,parcial,Área verde frente a Letras e Historia
+P06,Acceso Economía y Administración,-33.49740,-70.61160,Economía,concreto,sol,Acceso sur del edificio de FEN
+P07,Hall Universitario,-33.49820,-70.61290,Eje central,concreto,sombra,Zona techada junto al Work Café
+P08,Pasto central (Enfermería),-33.49908,-70.61275,Eje central,pasto,parcial,Área verde grande entre Enfermería y Torres Siamesas
+P09,Explanada Ingeniería,-33.49980,-70.61270,Ingeniería,concreto,sol,Frente al edificio Raúl Deves
+P10,Patio Edificio San Agustín,-33.49950,-70.61439,Ingeniería,concreto,sol,Patio entre Salas H y Construcción Civil
+P11,Prado sur-poniente,-33.49996,-70.61449,Ingeniería,pasto,sombra,Área verde con árboles junto a Hidráulica
+P12,Paseo Larraín Gandarillas,-33.49827,-70.61187,Eje central,concreto,sombra,Paseo arbolado frente al Templo
+P13,Patio Física y Química,-33.49935,-70.61171,Ciencias,concreto,sol,Patio entre Física y Química
+P14,Biblioteca Gauss,-33.49985,-70.61050,Ciencias,mixto,parcial,Entorno de la biblioteca de Matemáticas
+P15,Explanada Biblioteca Central,-33.49835,-70.61040,Biblioteca y Sociales,concreto,sol,Explanada al poniente de la Biblioteca Central
+P16,Concha Acústica,-33.49756,-70.60954,Biblioteca y Sociales,pasto,sol,Anfiteatro de pasto
+P17,Estacionamiento Sur,-33.50112,-70.61067,Acceso sur,asfalto,sol,Estacionamiento junto a Larraín Gandarillas
+P18,College UC,-33.50052,-70.61086,Ciencias,concreto,parcial,Entorno del edificio College
+P19,Canchas de fútbol,-33.49996,-70.60837,Deportes,pasto,sol,Canchas abiertas
+P20,Estacionamiento Oriente,-33.49686,-70.60804,Acceso oriente,asfalto,sol,Estacionamiento grande del sector oriente
+P21,Huertos de Agronomía,-33.49640,-70.60860,Agronomía,pasto,parcial,Huertos e invernaderos

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>San Joaquín Bajo el Sol · Mapa Interactivo de Calor</title>
+  <meta name="description" content="Mapa interactivo de sensación térmica del Campus San Joaquín UC. Proyecto GEO624 Empoderamiento Climático.">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="panel" aria-label="Panel de control">
+      <button id="toggle-panel" class="solo-movil" aria-expanded="true" aria-controls="panel-contenido">
+        <span>Controles y resumen</span><span class="flecha" aria-hidden="true">▾</span>
+      </button>
+
+      <div id="panel-contenido">
+        <header>
+          <p class="sobretitulo">GEO624 · Empoderamiento Climático</p>
+          <h1>San Joaquín Bajo el Sol</h1>
+          <p class="subtitulo">Mapa interactivo de calor del Campus San Joaquín UC</p>
+        </header>
+
+        <div id="aviso-ejemplo" class="aviso" hidden>
+          <strong>Datos de ejemplo.</strong> Estas mediciones son inventadas para probar el mapa; no son resultados.
+        </div>
+        <div id="aviso-error" class="aviso aviso-error" hidden></div>
+
+        <section class="bloque">
+          <h2>Qué mostrar</h2>
+          <label class="campo">
+            <span>Variable</span>
+            <select id="sel-variable">
+              <option value="sensacion">Sensación de calor (1 a 7)</option>
+              <option value="temp">Temperatura del aire (°C)</option>
+            </select>
+          </label>
+
+          <div class="campo">
+            <span id="lbl-momento">Momento del día</span>
+            <div class="segmentado" role="radiogroup" aria-labelledby="lbl-momento" id="seg-momento">
+              <button type="button" role="radio" aria-checked="true" data-valor="todos">Todos</button>
+              <button type="button" role="radio" aria-checked="false" data-valor="manana">Mañana</button>
+              <button type="button" role="radio" aria-checked="false" data-valor="mediodia">Mediodía</button>
+              <button type="button" role="radio" aria-checked="false" data-valor="tarde">Tarde</button>
+            </div>
+          </div>
+
+          <label class="campo">
+            <span>Fecha</span>
+            <select id="sel-fecha"><option value="todas">Todas las fechas</option></select>
+          </label>
+        </section>
+
+        <section class="bloque">
+          <h2>Capas</h2>
+          <label class="check"><input type="checkbox" id="chk-puntos" checked> Puntos de medición</label>
+          <label class="check"><input type="checkbox" id="chk-idw" checked> Superficie interpolada (IDW)</label>
+          <label class="check"><input type="checkbox" id="chk-campus" checked> Superficies del campus (OSM)</label>
+          <div class="leyenda-campus" id="leyenda-campus">
+            <span><i class="sw sw-edificio"></i>Edificio</span>
+            <span><i class="sw sw-verde"></i>Área verde</span>
+            <span><i class="sw sw-arbol"></i>Árbol</span>
+            <span><i class="sw sw-estac"></i>Estacionamiento</span>
+          </div>
+        </section>
+
+        <section class="bloque">
+          <h2 id="titulo-leyenda">Escala</h2>
+          <div id="leyenda"></div>
+        </section>
+
+        <section class="bloque">
+          <h2>Promedio por tipo de lugar</h2>
+          <div id="resumen-superficie" class="barras"></div>
+          <div id="resumen-sombra" class="barras"></div>
+        </section>
+
+        <section class="bloque">
+          <h2>Puntos más calurosos</h2>
+          <ol id="ranking" class="ranking"></ol>
+        </section>
+
+        <footer>
+          <p id="estado-datos">Cargando datos…</p>
+          <p class="tip">Haz clic en cualquier lugar del mapa para obtener sus coordenadas (sirve para agregar puntos nuevos).</p>
+          <p class="creditos">Felipe de la Maza · Magdalena Gazitúa · Josefa Prieto · Nicolás Prieto<br>Base: © colaboradores de OpenStreetMap · Imagen satelital: Esri, Maxar, Earthstar Geographics</p>
+        </footer>
+      </div>
+    </aside>
+
+    <main id="mapa" aria-label="Mapa del Campus San Joaquín"></main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/mapa.js"></script>
+</body>
+</html>
